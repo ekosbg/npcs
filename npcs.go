@@ -10,12 +10,11 @@ func (loc Location) String() string {
 }
 
 // EuclideanDistance returns the distance between two in-game locations
-func (loc Location)	EuclideanDistance(target Location) float64 {
-		return math.Sqrt(
-				(loc.X-target.X)*(loc.X-target.X) +
-					(loc.Y-target.Y)*(loc.Y-target.Y) +
-					(loc.Z-target.Z)*(loc.Z-target.Z)
-		)
+func (loc Location) EuclideanDistance(target Location) float64 {
+	return math.Sqrt(
+			(loc.X-target.X) * (loc.X-target.X) +
+			(loc.Y-target.Y) * (loc.Y-target.Y) +
+			(loc.Z-target.Z) * (loc.Z-target.Z) ) 
 }
 
 // DistanceTo returns the distance between two in-game characters
